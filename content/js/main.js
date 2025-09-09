@@ -57,6 +57,7 @@ btnCerrar.addEventListener("click",
                 contador.auto=0;
                 contador.btnBus=0;
                 contador.camion=0;
+                contador.total=0;
                 estado=false;
                 //Habitar botones
                 btnAbrir.disabled = false;
@@ -71,6 +72,7 @@ btnCerrar.addEventListener("click",
                 txtCamion.value="---";
                 txtTotal.value="---";
 
+                //Eliminar elementos del registro temporal
                 document.getElementById("lista").innerHTML = "";
             }
         })
