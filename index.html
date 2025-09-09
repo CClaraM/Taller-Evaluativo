@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- minified css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./content/js/main.js"></script>
+    <title>CONTROL PEAJE POPAYAN - TAMBO</title>
+</head>
+<body>
+    <div class="container">
+        <div class="w-100" style="margin: 0 auto;"></div>
+        <div class="w-100" style="display: flex; padding-top: 60px">
+            <div class="w-50" style="margin: 0 auto">
+                <h3 class="fw-bold text-center">CONTROL PEAJE POPAYAN - TAMBO</h3>
+                <form id="frmValidador">
+                    <div class="mt-2">
+                        <label for="txtAutomovil" class="fw-bold">Automovil</label>
+                        <input type="text" name="txtAutomovil" id="txtAutomovil" class="form-control" placeholder="---" disabled>
+                    </div>
+                    <div class="mt-2">
+                        <label for="txtBuses" class="fw-bold">Buses</label>
+                        <input type="text" name="txtBuses" id="txtBuses" class="form-control" placeholder="---" disabled>
+                    </div>
+                    <div class="mt-2">
+                        <label for="txtCamiones" class="fw-bold">Camiones</label>
+                        <input type="text" name="txtCamiones" id="txtCamiones" class="form-control" placeholder="---" disabled>
+                    </div>
+                    <div class="mt-2">
+                        <label for="txtTotal" class="fw-bold">Total recaudo</label>
+                        <input type="text" name="txtTotal" id="txtTotal" class="form-control" placeholder="Refleja el total de recaudo" disabled>
+                    </div>
+
+                    <div class="mt-2">
+                        <button id="btnAbrir" type="button" class="btn btn-dark">Abrir Peaje</button>
+                    </div>
+                    <div class="mt-2">
+                        <button id="btnCerrar" type="button" disabled class="btn btn-danger">Cerrar Peaje</button>
+                    </div>
+                </form>
+            </div>
+            <div class="w-50" style="margin: 0 auto">
+                <div class="w-50" style="margin: 0 auto">
+                    <div class="mt-2">
+                        <button id="btnAutomovil" type="button" disabled class="btn">Automovil</button>
+                    </div>
+                    <div class="mt-2">
+                        <button id="btnBuses" type="button" disabled class="btn">Buses</button>
+                    </div>
+                    <div class="mt-2">
+                        <button id="btnCamiones" type="button" disabled class="btn">Camiones</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-50" style="display: contents; width: 50%;">
+            <div class="w-100" style="height: 100px;"></div>
+            <h3 class="fw-bold text-center">Tabla Registros</h3>
+            <div class="mt-3">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr class="text-center">
+                            <th>Tipo Vehiculo</th>
+                            <th>Tarifa</th>
+                            <th>Hora Registro</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
