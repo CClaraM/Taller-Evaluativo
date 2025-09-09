@@ -70,6 +70,8 @@ btnCerrar.addEventListener("click",
                 txtBuses.value="---";
                 txtCamion.value="---";
                 txtTotal.value="---";
+
+                document.getElementById("lista").innerHTML = "";
             }
         })
     }
