@@ -2,7 +2,9 @@ export default function registrar(tipo){
     let vehiculo=[];
     let tarifa=null;
     let etiqueta=null;
-    let fecha=Date.now();
+
+    const timestamp = Date.now();
+    let fecha = new Date(timestamp);
     
     if (tipo=="txtAutomovil") {
         tarifa=5000
@@ -16,7 +18,7 @@ export default function registrar(tipo){
     }
     vehiculo.push(etiqueta);
     vehiculo.push(tarifa);
-    vehiculo.push(fecha);
+    vehiculo.push(fecha.toLocaleString());
     return vehiculo;
 }
 
